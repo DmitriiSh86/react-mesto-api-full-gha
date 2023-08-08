@@ -4,7 +4,7 @@ import { useState } from "react";
 import {authorization} from './AuthApi'
 import api from '../utils/Api'
 
-function Login({handleLogin, handleTooltipClick, setIsOk, setCurrentUser}){
+function Login({handleLogin, handleTooltipClick, setIsOk, setCurrentUser, setEmail}){
     const [formValue, setFormValue] = useState({
         email: '',
         password: ''
@@ -24,7 +24,10 @@ function Login({handleLogin, handleTooltipClick, setIsOk, setCurrentUser}){
         evt.preventDefault();
         authorization(formValue.email, formValue.password)
         .then((data) => {
-            api.getUserInfo().then((user) => {setCurrentUser(user.data)}).catch((err) => console.log(err));
+            api.getUserInfo().then((user) => {
+                setCurrentUser(user.data)
+                setEmail(user.data.email)
+            }).catch((err) => console.log(err));
             handleLogin(true);
             navigate('/');
         })

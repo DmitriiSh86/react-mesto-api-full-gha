@@ -134,7 +134,6 @@ function App() {
           return
         }        
         setIsLoggedIn(true);
-        setEmail(data.email);
         navigate('/')
       })
       .catch((error) => {
@@ -177,7 +176,7 @@ function App() {
             <Route path="/sign-in" element={
               <>
                 <Header />
-                <Login handleLogin={setIsLoggedIn} handleTooltipClick={handleTooltipClick} setIsOk={setIsOk} setCurrentUser={setCurrentUser}/>
+                <Login handleLogin={setIsLoggedIn} handleTooltipClick={handleTooltipClick} setIsOk={setIsOk} setCurrentUser={setCurrentUser} setEmail= {setEmail}/>
               </>
             }/>
             

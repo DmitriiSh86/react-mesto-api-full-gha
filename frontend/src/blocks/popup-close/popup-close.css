@@ -1,0 +1,28 @@
+.popup-close{
+    margin: 0;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    box-shadow: none;
+    border: none;
+    background: url(../../images/cross.svg);
+    background-size: contain;
+    position: absolute;
+    top: -40px;
+    right: -40px;
+}
+
+@media (max-width: 640px){
+    .popup-close{
+        top: -36px;
+        right: 0;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.popup-close:hover{
+    opacity: 0.6;
+    transition: 0.2s ease;
+    cursor: pointer;
+}

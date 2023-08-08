@@ -1,0 +1,15 @@
+.elements__photo{
+    margin: 0;
+    padding: 0;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    object-fit: cover;
+    color: white;
+    height: 282px;    
+}
+
+.elements__photo:hover{
+    opacity: 0.5;
+    transition: 0.2s ease;
+    cursor: pointer;
+}

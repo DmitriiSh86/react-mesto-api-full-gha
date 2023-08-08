@@ -1,0 +1,7 @@
+.elements__element{
+    width: 100%;
+    max-width: 282px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}

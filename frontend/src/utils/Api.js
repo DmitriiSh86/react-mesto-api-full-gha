@@ -110,7 +110,7 @@ class Api {
 }
 
 const api = new Api({
-baseUrl: 'http://api.dmitrii-mesto.nomoreparties.co',
+baseUrl: 'https://api.dmitrii-mesto.nomoreparties.co',
 headers: {
   'Content-Type': 'application/json'
 }

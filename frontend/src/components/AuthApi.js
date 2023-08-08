@@ -1,4 +1,4 @@
-const BASE_URL = 'http://api.dmitrii-mesto.nomoreparties.co';
+const BASE_URL = 'https://api.dmitrii-mesto.nomoreparties.co';
 
 function checkResponse(res) {
     if (res.ok) return res.json();

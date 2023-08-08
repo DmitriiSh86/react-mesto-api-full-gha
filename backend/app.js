@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cookies = require('cookie-parser');
@@ -9,8 +8,6 @@ mongoose.connect('mongodb://127.0.0.1:27017/mestodb', {
 });
 
 const { errors } = require('celebrate');
-// eslint-disable-next-line no-unused-vars
-const { requestLogger, errorLogger } = require('./middlewares/logger');
 const errorHandler = require('./middlewares/error-handler');
 
 const app = express();

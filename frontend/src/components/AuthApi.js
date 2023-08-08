@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:4000';
+const BASE_URL = 'api.dmitrii-mesto.nomoreparties.co';
 
 function checkResponse(res) {
     if (res.ok) return res.json();

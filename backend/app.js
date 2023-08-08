@@ -13,7 +13,7 @@ const errorHandler = require('./middlewares/error-handler');
 const app = express();
 const router = require('./routes');
 
-app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
+app.use(cors({ origin: 'http://dmitrii-mesto.nomoreparties.co/', credentials: true }));
 
 app.use(cookies());
 app.use(express.json());

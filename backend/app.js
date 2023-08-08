@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cookies = require('cookie-parser');
 const cors = require('cors');
+const helmet = require('helmet');
 
 mongoose.connect('mongodb://127.0.0.1:27017/mestodb', {
   useNewUrlParser: true,
@@ -13,6 +14,8 @@ const errorHandler = require('./middlewares/error-handler');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const app = express();
+
+app.use(helmet());
 
 const router = require('./routes');
 

@@ -134,6 +134,7 @@ function App() {
           return
         }        
         setIsLoggedIn(true);
+        setEmail(data.email);
         navigate('/')
       })
       .catch((error) => {

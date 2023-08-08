@@ -7,6 +7,7 @@ const InternalServer = require('../errors/internal-server-error');
 const Unauthorized = require('../errors/unauthorized-error');
 const Conflict = require('../errors/conflict-error');
 const { CREATED_STATUS } = require('../utils/status');
+const { JWT_SECRET } = require('../config');
 
 module.exports.getUsers = (req, res, next) => {
   User.find({})
@@ -92,7 +93,7 @@ module.exports.login = (req, res, next) => {
   return User.findUserByCredentials(email, password)
     .then((user) => {
       const payload = { _id: user._id };
-      const token = jwt.sign(payload, 'some-secret-key', { expiresIn: '7d' });
+      const token = jwt.sign(payload, JWT_SECRET, { expiresIn: '7d' });
       res.cookie('jwt', token, {
         httpOnly: true,
         sameSite: true,
